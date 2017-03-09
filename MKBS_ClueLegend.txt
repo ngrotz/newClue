@@ -1,0 +1,11 @@
+T, Ticket Booth, Card
+C, Concessions Stand, Card
+B, Bathroom, Card
+D, Theater D, Card
+E, Theater E, Card
+F, Theater F, Card
+A, Arcade, Card
+R, Break Room, Card
+P, Parking Lot, Card
+W, Walkway, Other
+X, Movie Display, Other

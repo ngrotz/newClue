@@ -1,0 +1,117 @@
+commit e10b49f2f475f42829512d7269338e605fa92e3b
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Sun Mar 5 14:35:12 2017 -0700
+
+    Adjacency tests compile but fail
+
+commit 615c9753fed399d846b1872ade1259fd33da6397
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Sun Mar 5 13:50:46 2017 -0700
+
+    InitBoardTests pass, added test plan to excel layout
+
+commit 406abeb7afe0abd3ee677f1fc247f94876141b0d
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Thu Mar 2 11:21:38 2017 -0700
+
+    Adding BadConfigFormatException, exception test passes
+
+commit 80fa75fd70ef301c2976a1e8660f10ca1b81ea93
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Thu Mar 2 11:08:00 2017 -0700
+
+    CR tests pass/compile
+
+commit 507963559611fb306c36ba002c7f832fec4cb16d
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Thu Mar 2 10:39:57 2017 -0700
+
+    Our init test passes
+
+commit 30c50116471e1684fb23ba3690f30351dc646295
+Merge: daff1a6 97297f4
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 12:01:42 2017 -0700
+
+    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
+
+commit daff1a68ac161150e3748d3aa99c0fe5b0912745
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 12:01:31 2017 -0700
+
+    Editing comment in test
+
+commit 97297f46261da358767e561cbed52ceddbd47905
+Author: Brandon Shevela <bshevela@mines.edu>
+Date:   Tue Feb 28 11:56:45 2017 -0700
+
+    Adding Board Class and Text File
+
+commit e26dab5af86283ce6e1050fd3b86df5c888a28f7
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 11:49:10 2017 -0700
+
+    Adding DoorDirection enum
+
+commit b82265426a8a82f1079df9b3520bcbd53e2cec91
+Merge: 6a41006 2b3865c
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 11:39:43 2017 -0700
+
+    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
+
+commit 6a4100648bdbf08840bd0ec6d901fa624bf0abd7
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 11:39:25 2017 -0700
+
+    Adding our test file
+
+commit 2b3865ca13ec2f0427875e9c25e2fb04d1de579b
+Author: Brandon Shevela <bshevela@mines.edu>
+Date:   Tue Feb 28 11:31:06 2017 -0700
+
+    Adding our data
+
+commit 28f180cd226936d5833421e72e51d7615ab38973
+Merge: 7fb7da6 668febe
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 11:15:48 2017 -0700
+
+    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
+
+commit 7fb7da67b1cfd6cd8379e791ee5f0b0eff946f79
+Author: Madison Klein <madisonklein@mines.edu>
+Date:   Tue Feb 28 11:15:37 2017 -0700
+
+    Fixing merge conflict of gitignore
+
+commit 668febedc06c42a4d4fb9e62c37c50e94e1a8a28
+Author: Brandon Shevela <bshevela@mines.edu>
+Date:   Tue Feb 28 11:11:25 2017 -0700
+
+    Clue Board Pt. 1 Initial Commit
+
+commit c64f764b7d214a45d36621edc684bf637b37a675
+Merge: e2cdfdd b485286
+Author: Brandon Shevela <bshevela@mymail.mines.edu>
+Date:   Mon Feb 27 23:40:45 2017 -0700
+
+    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
+
+commit e2cdfdd7dd4d34fc88536226bae4b5863646a6bf
+Author: Brandon Shevela <Brandon Shevela>
+Date:   Mon Feb 27 23:25:37 2017 -0700
+
+    Another Commit
+
+commit 264cb3b5719611df20952c172f4c971195e0c39b
+Author: Brandon Shevela <Brandon Shevela>
+Date:   Mon Feb 27 23:16:42 2017 -0700
+
+    Initail Commit
+
+commit b4852863c99093db2e941440d2e7addbab99aca0
+Author: bshevela <bshevela@mymail.mines.edu>
+Date:   Mon Feb 27 23:09:35 2017 -0700
+
+    Initial commit
