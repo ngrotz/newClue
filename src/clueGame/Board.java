@@ -16,9 +16,14 @@ public class Board {
 	 private int numRows, numCols;
 	 private File layoutFile;
 	 private File legendFile;
+	 private File personFile;
+	 private File weaponFile;
 	 private Map<BoardCell, Set<BoardCell>> adjMtx = new HashMap<BoardCell, Set<BoardCell>>();
-	private Set<BoardCell> visited;
-	private Set<BoardCell> targets;
+	 private Set<BoardCell> visited;
+	 private Set<BoardCell> targets;
+	 private ArrayList<Card> personDeck;
+	 private ArrayList<Card> weaponDeck;
+	 private ArrayList<Card> roomDeck;
 	
 	// variable used for singleton pattern
 	private static Board theInstance = new Board();
@@ -28,25 +33,31 @@ public class Board {
 	public static Board getInstance() {
 		return theInstance;
 	}
-	public void setConfigFiles(String layout, String legendFile) {
+	public void setConfigFiles(String layout, String legendFile, String personFile, String weaponFile) {
 		this.layoutFile = new File(layout);
 		this.legendFile = new File(legendFile);
+		this.personFile = new File(personFile);
+		this.weaponFile = new File(weaponFile);
 		
 		return;
 	}
 	
 	public void loadRoomConfig() throws BadConfigFormatException, FileNotFoundException {
 		legend = new HashMap<Character, String>();
+		roomDeck = new ArrayList<Card>();
 		BufferedReader br = new BufferedReader(new FileReader(legendFile));
 		try {
 		String line = br.readLine();
 			while (line != null) {
 				if (!line.split(",")[2].substring(1).equals("Card")) {
+					Card testRoom = new Card((line.split(",")[1].substring(1)), "Room");
+					roomDeck.add(testRoom);
 					if (!line.split(",")[2].substring(1).equals("Other")) throw new BadConfigFormatException(legendFile.getName());
 				}
 				legend.put(line.split(",")[0].toCharArray()[0], line.split(",")[1].substring(1));
 				line = br.readLine();
 			}
+			br.close();
 		}
 		catch (IOException e) {
 			e.printStackTrace();
@@ -179,5 +190,49 @@ public class Board {
 		return adjMtx.get(board[row][col]);
 	}
 	
+	//NEW KEVIN AND NIKI STUFF//
 	
+	public void loadPeopleConfig() throws BadConfigFormatException, FileNotFoundException {
+		BufferedReader br = new BufferedReader(new FileReader(personFile));
+		personDeck = new ArrayList<Card>();
+		try {
+			String line = br.readLine();
+			Card testPerson = new Card(line, "Person");
+			while (line != null) {
+				personDeck.add(testPerson);
+				line = br.readLine();
+				testPerson = new Card(line, "Person");
+			}
+			br.close();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void loadWeaponConfig() throws BadConfigFormatException, FileNotFoundException {
+		BufferedReader br = new BufferedReader(new FileReader(weaponFile));
+		weaponDeck = new ArrayList<Card>();
+		try {
+			String line = br.readLine();
+			Card testPerson = new Card(line, "Weapon");
+			while (line != null) {
+				weaponDeck.add(testPerson);
+				line = br.readLine();
+				testPerson = new Card(line, "Weapon");
+			}
+			br.close();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public Card handleSuggestion(){
+		return null;
+	}
+	
+	public boolean checkAccusation(Solution accusation){
+		return false;
+	}
 }
