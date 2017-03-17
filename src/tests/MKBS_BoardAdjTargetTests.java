@@ -19,7 +19,7 @@ public class MKBS_BoardAdjTargetTests {
 		// Board is singleton, get the only instance and initialize it		
 		board = Board.getInstance();
 		// set the file names to use my config files
-		board.setConfigFiles("MKBS_ClueLayout.csv", "MKBS_ClueLegend.txt");	
+		board.setConfigFiles("MKBS_ClueLayout.csv", "MKBS_ClueLegend.txt", "NGKM_Person.txt", "NGKM_Weapon.txt");
 		board.initialize();
 	}
 

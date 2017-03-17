@@ -1,5 +1,6 @@
 package clueGame;
 
+import java.awt.Color;
 import java.io.*;
 
 import java.util.ArrayList;
@@ -21,9 +22,8 @@ public class Board {
 	 private Map<BoardCell, Set<BoardCell>> adjMtx = new HashMap<BoardCell, Set<BoardCell>>();
 	 private Set<BoardCell> visited;
 	 private Set<BoardCell> targets;
-	 private ArrayList<Card> personDeck;
-	 private ArrayList<Card> weaponDeck;
-	 private ArrayList<Card> roomDeck;
+	 private ArrayList<Card> deck;
+	 private ArrayList<Player> players;
 	
 	// variable used for singleton pattern
 	private static Board theInstance = new Board();
@@ -44,14 +44,14 @@ public class Board {
 	
 	public void loadRoomConfig() throws BadConfigFormatException, FileNotFoundException {
 		legend = new HashMap<Character, String>();
-		roomDeck = new ArrayList<Card>();
+		deck = new ArrayList<Card>();
 		BufferedReader br = new BufferedReader(new FileReader(legendFile));
 		try {
 		String line = br.readLine();
 			while (line != null) {
 				if (!line.split(",")[2].substring(1).equals("Card")) {
 					Card testRoom = new Card((line.split(",")[1].substring(1)), "Room");
-					roomDeck.add(testRoom);
+					deck.add(testRoom);
 					if (!line.split(",")[2].substring(1).equals("Other")) throw new BadConfigFormatException(legendFile.getName());
 				}
 				legend.put(line.split(",")[0].toCharArray()[0], line.split(",")[1].substring(1));
@@ -194,12 +194,12 @@ public class Board {
 	
 	public void loadPeopleConfig() throws BadConfigFormatException, FileNotFoundException {
 		BufferedReader br = new BufferedReader(new FileReader(personFile));
-		personDeck = new ArrayList<Card>();
+		deck = new ArrayList<Card>();
 		try {
 			String line = br.readLine();
 			Card testPerson = new Card(line, "Person");
 			while (line != null) {
-				personDeck.add(testPerson);
+				deck.add(testPerson);
 				line = br.readLine();
 				testPerson = new Card(line, "Person");
 			}
@@ -212,12 +212,12 @@ public class Board {
 	
 	public void loadWeaponConfig() throws BadConfigFormatException, FileNotFoundException {
 		BufferedReader br = new BufferedReader(new FileReader(weaponFile));
-		weaponDeck = new ArrayList<Card>();
+		deck = new ArrayList<Card>();
 		try {
 			String line = br.readLine();
 			Card testPerson = new Card(line, "Weapon");
 			while (line != null) {
-				weaponDeck.add(testPerson);
+				deck.add(testPerson);
 				line = br.readLine();
 				testPerson = new Card(line, "Weapon");
 			}
@@ -226,6 +226,46 @@ public class Board {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void initializePlayers(){
+		players = new ArrayList<Player>();
+		try {
+			loadPeopleConfig();
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (BadConfigFormatException e) {
+			System.out.println(e.getMessage());
+		}
+		for(Card a : deck){
+			if(a.getCardType() == CardType.PERSON){
+				if(a.getName() == "Miss Scarlett"){
+					Player newPlayer = new HumanPlayer(a.getName(), theInstance.getCellAt(0,2), Color.red );
+					players.add(newPlayer);
+				}
+				if(a.getName() == "Professor Plum"){
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,2), Color.magenta );
+					players.add(newPlayer);
+				}
+				if(a.getName() == "Mrs. Peacock"){
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(0,10), Color.blue );
+					players.add(newPlayer);
+				}
+				if(a.getName() == "Reverend Mr Green"){
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,9), Color.green );
+					players.add(newPlayer);
+				}
+				if(a.getName() == "Colonel Mustard"){
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,18), Color.yellow);
+					players.add(newPlayer);
+				}
+				if(a.getName() == "Mrs. White"){
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(20,20), Color.white );
+					players.add(newPlayer);
+				}
+			}
+		}
+		
 	}
 	
 	public Card handleSuggestion(){

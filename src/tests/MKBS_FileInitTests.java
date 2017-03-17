@@ -27,7 +27,7 @@ public class MKBS_FileInitTests {
 		// Board is singleton, get the only instance
 		board = Board.getInstance();
 		// set the file names to use my config files
-		board.setConfigFiles("MKBS_ClueLayout.csv", "MKBS_ClueLegend.txt");		
+		board.setConfigFiles("MKBS_ClueLayout.csv", "MKBS_ClueLegend.txt", "NGKM_Person.txt", "NGKM_Weapon.txt");	
 		// Initialize will load BOTH config files 
 		board.initialize();
 	}
