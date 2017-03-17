@@ -23,6 +23,7 @@ public class Board {
 	 private Set<BoardCell> visited;
 	 private Set<BoardCell> targets;
 	 private ArrayList<Card> deck;
+	 private ArrayList<Card> dealtCards;
 	 private ArrayList<Player> players;
 	
 	// variable used for singleton pattern
@@ -283,5 +284,8 @@ public class Board {
 	}
 	public ArrayList<Card> getDeck() {
 		return deck;
+	}
+	public ArrayList<Card> getDealtDeck() {
+		return dealtCards;
 	}
 }
