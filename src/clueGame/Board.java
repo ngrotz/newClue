@@ -50,9 +50,11 @@ public class Board {
 		String line = br.readLine();
 			while (line != null) {
 				if (!line.split(",")[2].substring(1).equals("Card")) {
-					Card testRoom = new Card((line.split(",")[1].substring(1)), "Room");
-					deck.add(testRoom);
 					if (!line.split(",")[2].substring(1).equals("Other")) throw new BadConfigFormatException(legendFile.getName());
+				}
+				if (!line.split(",")[2].substring(1).equals("Other")){
+				Card testRoom = new Card((line.split(",")[1].substring(1)), "Room");
+				deck.add(testRoom);
 				}
 				legend.put(line.split(",")[0].toCharArray()[0], line.split(",")[1].substring(1));
 				line = br.readLine();
@@ -194,7 +196,6 @@ public class Board {
 	
 	public void loadPeopleConfig() throws BadConfigFormatException, FileNotFoundException {
 		BufferedReader br = new BufferedReader(new FileReader(personFile));
-		deck = new ArrayList<Card>();
 		try {
 			String line = br.readLine();
 			Card testPerson = new Card(line, "Person");
@@ -212,7 +213,6 @@ public class Board {
 	
 	public void loadWeaponConfig() throws BadConfigFormatException, FileNotFoundException {
 		BufferedReader br = new BufferedReader(new FileReader(weaponFile));
-		deck = new ArrayList<Card>();
 		try {
 			String line = br.readLine();
 			Card testPerson = new Card(line, "Weapon");
@@ -280,5 +280,8 @@ public class Board {
 	
 	public ArrayList<Player> getPlayers() {
 		return players;
+	}
+	public ArrayList<Card> getDeck() {
+		return deck;
 	}
 }
