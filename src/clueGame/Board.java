@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import clueGame.BoardCell;
@@ -227,6 +228,7 @@ public class Board {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+		shuffleAndDeal();
 	}
 	
 	public void initializePlayers(){
@@ -266,7 +268,23 @@ public class Board {
 				}
 			}
 		}
-		
+	}
+	
+	public void shuffleAndDeal(){
+		dealtCards = new ArrayList<Card>();
+		while(deck.size() - dealtCards.size() > players.size()){
+			for (int i = 0; i < players.size(); i++){
+			System.out.println(i);
+			Random rand = new Random();
+			int position = rand.nextInt(21);
+			while(dealtCards.contains(deck.get(position))){
+				rand = new Random();
+				position = rand.nextInt(21);
+				}
+			dealtCards.add(deck.get(position));
+			players.get(i).addCard(deck.get(position));
+			}		
+		}
 	}
 	
 	public Card handleSuggestion(){
