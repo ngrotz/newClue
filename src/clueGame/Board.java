@@ -239,27 +239,27 @@ public class Board {
 		}
 		for(Card a : deck){
 			if(a.getCardType() == CardType.PERSON){
-				if(a.getName() == "Miss Scarlett"){
+				if(a.getName().equals("Miss Scarlett")){
 					Player newPlayer = new HumanPlayer(a.getName(), theInstance.getCellAt(0,2), Color.red );
 					players.add(newPlayer);
 				}
-				if(a.getName() == "Professor Plum"){
+				if(a.getName().equals("Professor Plum")){
 					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,2), Color.magenta );
 					players.add(newPlayer);
 				}
-				if(a.getName() == "Mrs. Peacock"){
+				if(a.getName().equals("Mrs. Peacock")){
 					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(0,10), Color.blue );
 					players.add(newPlayer);
 				}
-				if(a.getName() == "Reverend Mr Green"){
+				if(a.getName().equals("Reverend Mr Green")){
 					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,9), Color.green );
 					players.add(newPlayer);
 				}
-				if(a.getName() == "Colonel Mustard"){
+				if(a.getName().equals("Colonel Mustard")){
 					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,18), Color.yellow);
 					players.add(newPlayer);
 				}
-				if(a.getName() == "Mrs. White"){
+				if(a.getName().equals("Mrs. White")){
 					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(20,20), Color.white );
 					players.add(newPlayer);
 				}
@@ -274,5 +274,11 @@ public class Board {
 	
 	public boolean checkAccusation(Solution accusation){
 		return false;
+	}
+	
+	//Getter functions for testing
+	
+	public ArrayList<Player> getPlayers() {
+		return players;
 	}
 }
