@@ -26,6 +26,7 @@ public class Board {
 	 private ArrayList<Card> deck;
 	 private ArrayList<Card> dealtCards;
 	 private ArrayList<Player> players;
+	 private Solution theAnswer;
 	
 	// variable used for singleton pattern
 	private static Board theInstance = new Board();
@@ -310,4 +311,11 @@ public class Board {
 	public BoardCell selectTarget() {
 		return null;
 	}
+	public Solution getTheAnswer() {
+		return theAnswer;
+	}
+	public void setTheAnswer(Solution theAnswer) {
+		this.theAnswer = theAnswer;
+	}
+	
 }
