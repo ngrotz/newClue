@@ -276,7 +276,6 @@ public class Board {
 		dealtCards = new ArrayList<Card>();
 		while(deck.size() - dealtCards.size() > players.size()){
 			for (int i = 0; i < players.size(); i++){
-			System.out.println(i);
 			Random rand = new Random();
 			int position = rand.nextInt(21);
 			while(dealtCards.contains(deck.get(position))){

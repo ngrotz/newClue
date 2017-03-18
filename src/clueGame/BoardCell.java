@@ -23,4 +23,11 @@ public class BoardCell {
 	public String toString() {
 		return String.valueOf(row) + String.valueOf(column);
 	}
+	public int getRow() {
+		return row;
+	}
+	public int getColumn() {
+		return column;
+	}
+
 }
