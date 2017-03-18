@@ -100,6 +100,8 @@ public class Board {
 			loadBoardConfig();
 			targets = new HashSet<BoardCell>();
 			calcAdjacencies();
+			initializePlayers();
+			loadWeaponConfig();
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
@@ -305,5 +307,8 @@ public class Board {
 	}
 	public ArrayList<Card> getDealtDeck() {
 		return dealtCards;
+	}
+	public BoardCell selectTarget() {
+		return null;
 	}
 }

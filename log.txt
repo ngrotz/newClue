@@ -1,117 +1,47 @@
-commit e10b49f2f475f42829512d7269338e605fa92e3b
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Sun Mar 5 14:35:12 2017 -0700
+commit cec27a9ab6f0ea9ad6a50a9d98e4f50ace17212d
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 16 20:26:50 2017 -0600
 
-    Adjacency tests compile but fail
+    Dealing Cards Test Success
 
-commit 615c9753fed399d846b1872ade1259fd33da6397
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Sun Mar 5 13:50:46 2017 -0700
+commit 24ba08dcf4936249403871f39fd63ff72c84f8c7
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 16 19:43:14 2017 -0600
 
-    InitBoardTests pass, added test plan to excel layout
+    Testing the dealing: failing
 
-commit 406abeb7afe0abd3ee677f1fc247f94876141b0d
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Thu Mar 2 11:21:38 2017 -0700
+commit 76274d19c3c15bcdce8675bb86ff578d6cc2dc3b
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 16 19:25:32 2017 -0600
 
-    Adding BadConfigFormatException, exception test passes
+    Load deck Success
 
-commit 80fa75fd70ef301c2976a1e8660f10ca1b81ea93
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Thu Mar 2 11:08:00 2017 -0700
+commit d7e3ffdd680c8e14f7dae3491f39326ba59889a5
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 16 19:04:30 2017 -0600
 
-    CR tests pass/compile
+    LoadPeopleTestSuccess
 
-commit 507963559611fb306c36ba002c7f832fec4cb16d
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Thu Mar 2 10:39:57 2017 -0700
+commit 1f82bf5f1e622d7a2be06254dc40ac07360aab2a
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 16 18:44:04 2017 -0600
 
-    Our init test passes
+    InitializePlayers()
 
-commit 30c50116471e1684fb23ba3690f30351dc646295
-Merge: daff1a6 97297f4
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 12:01:42 2017 -0700
+commit c28fbbd78a958df8943b00d21c66f5cdaa056e49
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 16 12:09:45 2017 -0600
 
-    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
+    Created the loadConfigFiles
 
-commit daff1a68ac161150e3748d3aa99c0fe5b0912745
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 12:01:31 2017 -0700
+commit 09384f9807549e00ca4c60bcfe64540aba8f1d62
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Tue Mar 14 12:15:36 2017 -0600
 
-    Editing comment in test
+    Initialized Card, Created the Player class
 
-commit 97297f46261da358767e561cbed52ceddbd47905
-Author: Brandon Shevela <bshevela@mines.edu>
-Date:   Tue Feb 28 11:56:45 2017 -0700
+commit 59cb517d659cf4fd5e9232655025bf703934b0f1
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Thu Mar 9 11:59:49 2017 -0700
 
-    Adding Board Class and Text File
-
-commit e26dab5af86283ce6e1050fd3b86df5c888a28f7
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 11:49:10 2017 -0700
-
-    Adding DoorDirection enum
-
-commit b82265426a8a82f1079df9b3520bcbd53e2cec91
-Merge: 6a41006 2b3865c
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 11:39:43 2017 -0700
-
-    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
-
-commit 6a4100648bdbf08840bd0ec6d901fa624bf0abd7
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 11:39:25 2017 -0700
-
-    Adding our test file
-
-commit 2b3865ca13ec2f0427875e9c25e2fb04d1de579b
-Author: Brandon Shevela <bshevela@mines.edu>
-Date:   Tue Feb 28 11:31:06 2017 -0700
-
-    Adding our data
-
-commit 28f180cd226936d5833421e72e51d7615ab38973
-Merge: 7fb7da6 668febe
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 11:15:48 2017 -0700
-
-    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
-
-commit 7fb7da67b1cfd6cd8379e791ee5f0b0eff946f79
-Author: Madison Klein <madisonklein@mines.edu>
-Date:   Tue Feb 28 11:15:37 2017 -0700
-
-    Fixing merge conflict of gitignore
-
-commit 668febedc06c42a4d4fb9e62c37c50e94e1a8a28
-Author: Brandon Shevela <bshevela@mines.edu>
-Date:   Tue Feb 28 11:11:25 2017 -0700
-
-    Clue Board Pt. 1 Initial Commit
-
-commit c64f764b7d214a45d36621edc684bf637b37a675
-Merge: e2cdfdd b485286
-Author: Brandon Shevela <bshevela@mymail.mines.edu>
-Date:   Mon Feb 27 23:40:45 2017 -0700
-
-    Merge branch 'master' of https://github.com/bshevela/ClueGameMKBS
-
-commit e2cdfdd7dd4d34fc88536226bae4b5863646a6bf
-Author: Brandon Shevela <Brandon Shevela>
-Date:   Mon Feb 27 23:25:37 2017 -0700
-
-    Another Commit
-
-commit 264cb3b5719611df20952c172f4c971195e0c39b
-Author: Brandon Shevela <Brandon Shevela>
-Date:   Mon Feb 27 23:16:42 2017 -0700
-
-    Initail Commit
-
-commit b4852863c99093db2e941440d2e7addbab99aca0
-Author: bshevela <bshevela@mymail.mines.edu>
-Date:   Mon Feb 27 23:09:35 2017 -0700
-
-    Initial commit
+    first
