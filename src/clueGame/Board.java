@@ -294,6 +294,13 @@ public class Board {
 	}
 	
 	public boolean checkAccusation(Solution accusation){
+		if(accusation.getPerson().equals(theAnswer.getPerson())){
+			if(accusation.getWeapon().equals(theAnswer.getWeapon())){
+				if(accusation.getRoom().equals(theAnswer.getRoom())){
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 	
