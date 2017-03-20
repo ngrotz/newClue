@@ -289,7 +289,7 @@ public class Board {
 		}
 	}
 	
-	public Card handleSuggestion(){
+	public Card handleSuggestion(Suggestion suggestion){
 		return null;
 	}
 	
