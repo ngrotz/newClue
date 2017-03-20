@@ -246,19 +246,19 @@ public class Board {
 		for(Card a : deck){
 			if(a.getCardType() == CardType.PERSON){
 				if(a.getName().equals("Miss Scarlett")){
-					Player newPlayer = new HumanPlayer(a.getName(), theInstance.getCellAt(0,2), Color.red );
+					Player newPlayer = new HumanPlayer(a.getName(), theInstance.getCellAt(0,2), Color.red);
 					players.add(newPlayer);
 				}
 				if(a.getName().equals("Professor Plum")){
-					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,2), Color.magenta );
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,2), Color.magenta);
 					players.add(newPlayer);
 				}
 				if(a.getName().equals("Mrs. Peacock")){
-					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(0,10), Color.blue );
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(0,10), Color.blue);
 					players.add(newPlayer);
 				}
 				if(a.getName().equals("Reverend Mr Green")){
-					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,9), Color.green );
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(30,9), Color.green);
 					players.add(newPlayer);
 				}
 				if(a.getName().equals("Colonel Mustard")){
@@ -266,7 +266,7 @@ public class Board {
 					players.add(newPlayer);
 				}
 				if(a.getName().equals("Mrs. White")){
-					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(20,20), Color.white );
+					Player newPlayer = new ComputerPlayer(a.getName(), theInstance.getCellAt(20,20), Color.white);
 					players.add(newPlayer);
 				}
 			}
@@ -284,7 +284,9 @@ public class Board {
 				position = rand.nextInt(21);
 				}
 			dealtCards.add(deck.get(position));
-			players.get(i).addCard(deck.get(position));
+			System.out.println(dealtCards.size());
+			players.get(i).addCard(deck.get(position));													//adding cards to the players hand
+			players.get(i).addToSeen(deck.get(position));													//adding the cards that are dealt to a player to his seen cards
 			}		
 		}
 	}
