@@ -291,7 +291,24 @@ public class Board {
 	}
 	
 	public Card handleSuggestion(Solution suggestion, Player a){
-		return null;
+		Player testPlayer = new Player();
+		Card returningCard = new Card("null", "null");
+
+		int position = players.indexOf(a) + 1;
+		while(position != players.indexOf(a)){
+			if(position == players.size()){
+				if(players.indexOf(a) == 0) return null;
+				position = 0;
+			}
+
+			testPlayer = players.get(position);
+
+			returningCard = testPlayer.disproveSuggestion(suggestion);
+			if(returningCard != null) break;
+			
+			position++;
+		}
+		return returningCard;
 	}
 	
 	public boolean checkAccusation(Solution accusation){
