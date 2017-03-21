@@ -290,7 +290,7 @@ public class Board {
 		}
 	}
 	
-	public Card handleSuggestion(Suggestion suggestion){
+	public Card handleSuggestion(Solution suggestion, Player a){
 		return null;
 	}
 	
@@ -309,6 +309,9 @@ public class Board {
 	
 	public ArrayList<Player> getPlayers() {
 		return players;
+	}
+	public void setPlayers(ArrayList<Player> players) {
+		this.players = players;
 	}
 	public ArrayList<Card> getDeck() {
 		return deck;
