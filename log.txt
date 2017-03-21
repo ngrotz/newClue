@@ -1,3 +1,12 @@
+REPOSITORY NAME: newClue
+
+
+commit 06daec557f0fff824f6e8eb05b5792aad1ce2625
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Mon Mar 20 23:39:01 2017 -0600
+
+    4 out of 6 working
+
 commit 9e710b3f5a8e69e7dc7c4d35ca74023ff6198787
 Author: ngrotz <ngrotz@mines.edu>
 Date:   Mon Mar 20 23:37:07 2017 -0600

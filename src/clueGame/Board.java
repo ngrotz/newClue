@@ -292,18 +292,18 @@ public class Board {
 	
 	public Card handleSuggestion(Solution suggestion, Player a){
 		Player testPlayer = new Player();
-		Card returningCard = new Card("null", "null");
-
+		Card returningCard = new Card();
 		int position = players.indexOf(a) + 1;
 		while(position != players.indexOf(a)){
 			if(position == players.size()){
 				if(players.indexOf(a) == 0) return null;
 				position = 0;
 			}
-
 			testPlayer = players.get(position);
+			
 
 			returningCard = testPlayer.disproveSuggestion(suggestion);
+			
 			if(returningCard != null) break;
 			
 			position++;
