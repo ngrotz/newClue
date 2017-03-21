@@ -1,3 +1,63 @@
+commit 9e710b3f5a8e69e7dc7c4d35ca74023ff6198787
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Mon Mar 20 23:37:07 2017 -0600
+
+    Handle suggestions tests 3 out of 6 working
+
+commit 657876818c6f46fac89135516bcee60efd49c1b7
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Mon Mar 20 22:22:19 2017 -0600
+
+    Handle suggestions tests failing
+
+commit f3da4c942e364d98055d1057e6da6e30252afe08
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Mon Mar 20 21:35:43 2017 -0600
+
+    Disprove suggestion finally working
+
+commit 1f7f2a85cc96a43c646d11efd152b4ed505f34d1
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Mon Mar 20 17:46:44 2017 -0600
+
+    Partner II tests
+
+commit 7c113370d9292decadf239f24518c28ebcf3cc22
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Mon Mar 20 11:22:02 2017 -0600
+
+    Failing tests: Create suggestion
+
+commit 9478416d47b67f7656052817d31dde9c1188abef
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Sun Mar 19 21:33:01 2017 -0600
+
+    Make accusation tests pass
+
+commit b83452604590138f58805742b3bb90a86f8a7769
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Sun Mar 19 21:29:17 2017 -0600
+
+    Make accusation failing tests
+
+commit 03261889b711ea3b644c78ce2422c187543b1d35
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Sat Mar 18 15:23:05 2017 -0600
+
+    Started makeaccusation
+
+commit b244b4e64bb90767e7fef03a8c3e0246ab0f6830
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Sat Mar 18 14:53:04 2017 -0600
+
+    TargetCalculation passing
+
+commit 0db821dd966f36da0f67ec37f8a88e9e0cdf9957
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Sat Mar 18 14:19:34 2017 -0600
+
+    TargetCalculations failing
+
 commit cec27a9ab6f0ea9ad6a50a9d98e4f50ace17212d
 Author: ngrotz <ngrotz@mines.edu>
 Date:   Thu Mar 16 20:26:50 2017 -0600
