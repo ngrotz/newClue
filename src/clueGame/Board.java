@@ -284,7 +284,6 @@ public class Board {
 				position = rand.nextInt(21);
 				}
 			dealtCards.add(deck.get(position));
-			System.out.println(dealtCards.size());
 			players.get(i).addCard(deck.get(position));													//adding cards to the players hand
 			players.get(i).addToSeen(deck.get(position));													//adding the cards that are dealt to a player to his seen cards
 			}		
