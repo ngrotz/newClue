@@ -1,5 +1,8 @@
-REPOSITORY NAME: newClue
+commit f33a26acbf47cc9e6a368d35a3a39ef3d7ffac76
+Author: ngrotz <ngrotz@mines.edu>
+Date:   Tue Mar 21 11:51:04 2017 -0600
 
+    Everything is working YEEEEEEEES
 
 commit 06daec557f0fff824f6e8eb05b5792aad1ce2625
 Author: ngrotz <ngrotz@mines.edu>

@@ -1,1 +1,0 @@
-CR_ClueLegendBadFormat.txt Config file format error
